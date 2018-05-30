@@ -70,7 +70,7 @@ if __name__ == "__main__":
 
     # 训练集不变
     training_set_inputs = array([[0, 0, 0], [1, 1, 1], [1, 0, 0], [0, 0, 1],[0, 1, 0]])
-    training_set_outputs = array([[1, 1, 0, 0,0]]).T
+    training_set_outputs = array([[2, 1, 0, 0,0]]).T
 
     neural_network.train(training_set_inputs, training_set_outputs, 10000)
 
@@ -82,5 +82,5 @@ if __name__ == "__main__":
     print(neural_network.synaptic_weights3)
 
     # 新样本测试
-    print("Considering new situation [1, 0, 0] -> ?: ")
-    print(neural_network.think(array([0, 1, 1])))
+    print("Considering new situation [0, 1, 1] -> ?: ")
+    print(neural_network.think(array([0, 0, 0])))

@@ -1,6 +1,10 @@
 #-*- coding: UTF-8 -*-
+# https://blog.csdn.net/m0_37650263/article/details/77343220
+# https://blog.csdn.net/leiting_imecas/article/details/71246541
 
-from numpy import exp, array, random, dot
-a= 0.444
-y_predict  = (a > 0.5 )+ 0
-print y_predict
+import csv
+
+out = open('result2.csv', 'a', newline='')
+csv_write = csv.writer(out, dialect='excel')
+csv_write.writerow(['22'])
+
