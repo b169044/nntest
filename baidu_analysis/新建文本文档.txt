@@ -1,0 +1,317 @@
+食品餐饮
+finished
+vocab
+finished2
+dataset
+test_size = 1365
+finished3
+WARNING:tensorflow:From E:/PycharmProjects/neural network/baidu_analysis/sentiment analysis.py:185: arg_max (from tensorflow.python.ops.gen_math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `argmax` instead
+2018-05-31 08:54:20.135368: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+WARNING:tensorflow:From E:\python3\lib\site-packages\tensorflow\python\util\tf_should_use.py:118: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+After 0 training step(s),validation accuracy using average model is 0.710659
+After 1 training step(s),validation accuracy using average model is 0.737185
+After 2 training step(s),validation accuracy using average model is 0.755818
+After 3 training step(s),validation accuracy using average model is 0.769406
+After 4 training step(s),validation accuracy using average model is 0.781937
+After 5 training step(s),validation accuracy using average model is 0.791863
+After 6 training step(s),validation accuracy using average model is 0.803662
+After 7 training step(s),validation accuracy using average model is 0.811229
+After 8 training step(s),validation accuracy using average model is 0.820504
+After 9 training step(s),validation accuracy using average model is 0.829862
+After 10 training step(s),validation accuracy using average model is 0.8393
+After 11 training step(s),validation accuracy using average model is 0.849227
+After 12 training step(s),validation accuracy using average model is 0.859235
+After 13 training step(s),validation accuracy using average model is 0.866884
+After 14 training step(s),validation accuracy using average model is 0.876404
+After 15 training step(s),validation accuracy using average model is 0.885598
+After 16 training step(s),validation accuracy using average model is 0.893653
+After 17 training step(s),validation accuracy using average model is 0.900651
+After 18 training step(s),validation accuracy using average model is 0.90773
+After 19 training step(s),validation accuracy using average model is 0.913263
+After 20 training step(s),test accuracy using average model is 0.764103
+旅游住宿
+finished
+vocab
+finished2
+dataset
+test_size = 1893
+finished3
+After 0 training step(s),validation accuracy using average model is 0.934515
+After 1 training step(s),validation accuracy using average model is 0.935219
+After 2 training step(s),validation accuracy using average model is 0.939033
+After 3 training step(s),validation accuracy using average model is 0.943786
+After 4 training step(s),validation accuracy using average model is 0.946661
+After 5 training step(s),validation accuracy using average model is 0.951179
+After 6 training step(s),validation accuracy using average model is 0.953937
+After 7 training step(s),validation accuracy using average model is 0.957634
+After 8 training step(s),validation accuracy using average model is 0.960451
+After 9 training step(s),validation accuracy using average model is 0.963443
+After 10 training step(s),validation accuracy using average model is 0.96626
+After 11 training step(s),validation accuracy using average model is 0.969487
+After 12 training step(s),validation accuracy using average model is 0.972597
+After 13 training step(s),validation accuracy using average model is 0.975707
+After 14 training step(s),validation accuracy using average model is 0.978524
+After 15 training step(s),validation accuracy using average model is 0.980343
+After 16 training step(s),validation accuracy using average model is 0.982514
+After 17 training step(s),validation accuracy using average model is 0.983922
+After 18 training step(s),validation accuracy using average model is 0.985624
+After 19 training step(s),validation accuracy using average model is 0.987149
+After 20 training step(s),test accuracy using average model is 0.950872
+金融服务
+finished
+vocab
+finished2
+dataset
+test_size = 1434
+finished3
+After 0 training step(s),validation accuracy using average model is 0.82928
+After 1 training step(s),validation accuracy using average model is 0.855771
+After 2 training step(s),validation accuracy using average model is 0.87103
+After 3 training step(s),validation accuracy using average model is 0.883114
+After 4 training step(s),validation accuracy using average model is 0.892486
+After 5 training step(s),validation accuracy using average model is 0.900077
+After 6 training step(s),validation accuracy using average model is 0.907436
+After 7 training step(s),validation accuracy using average model is 0.915105
+After 8 training step(s),validation accuracy using average model is 0.921998
+After 9 training step(s),validation accuracy using average model is 0.929435
+After 10 training step(s),validation accuracy using average model is 0.935786
+After 11 training step(s),validation accuracy using average model is 0.942525
+After 12 training step(s),validation accuracy using average model is 0.948722
+After 13 training step(s),validation accuracy using average model is 0.954841
+After 14 training step(s),validation accuracy using average model is 0.959721
+After 15 training step(s),validation accuracy using average model is 0.964059
+After 16 training step(s),validation accuracy using average model is 0.968552
+After 17 training step(s),validation accuracy using average model is 0.973354
+After 18 training step(s),validation accuracy using average model is 0.977537
+After 19 training step(s),validation accuracy using average model is 0.980635
+After 20 training step(s),test accuracy using average model is 0.854951
+医疗服务
+finished
+vocab
+finished2
+dataset
+test_size = 2031
+finished3
+After 0 training step(s),validation accuracy using average model is 0.937531
+After 1 training step(s),validation accuracy using average model is 0.944587
+After 2 training step(s),validation accuracy using average model is 0.950987
+After 3 training step(s),validation accuracy using average model is 0.955801
+After 4 training step(s),validation accuracy using average model is 0.960177
+After 5 training step(s),validation accuracy using average model is 0.963459
+After 6 training step(s),validation accuracy using average model is 0.966632
+After 7 training step(s),validation accuracy using average model is 0.969367
+After 8 training step(s),validation accuracy using average model is 0.97254
+After 9 training step(s),validation accuracy using average model is 0.975439
+After 10 training step(s),validation accuracy using average model is 0.977572
+After 11 training step(s),validation accuracy using average model is 0.980143
+After 12 training step(s),validation accuracy using average model is 0.981675
+After 13 training step(s),validation accuracy using average model is 0.983371
+After 14 training step(s),validation accuracy using average model is 0.985176
+After 15 training step(s),validation accuracy using average model is 0.986489
+After 16 training step(s),validation accuracy using average model is 0.98802
+After 17 training step(s),validation accuracy using average model is 0.989388
+After 18 training step(s),validation accuracy using average model is 0.990865
+After 19 training step(s),validation accuracy using average model is 0.992068
+After 20 training step(s),test accuracy using average model is 0.937469
+物流快递
+finished
+vocab
+finished2
+dataset
+test_size = 1477
+finished3
+After 0 training step(s),validation accuracy using average model is 0.88701
+After 1 training step(s),validation accuracy using average model is 0.910389
+After 2 training step(s),validation accuracy using average model is 0.921816
+After 3 training step(s),validation accuracy using average model is 0.928958
+After 4 training step(s),validation accuracy using average model is 0.934822
+After 5 training step(s),validation accuracy using average model is 0.940535
+After 6 training step(s),validation accuracy using average model is 0.947076
+After 7 training step(s),validation accuracy using average model is 0.951361
+After 8 training step(s),validation accuracy using average model is 0.955721
+After 9 training step(s),validation accuracy using average model is 0.959405
+After 10 training step(s),validation accuracy using average model is 0.962712
+After 11 training step(s),validation accuracy using average model is 0.965644
+After 12 training step(s),validation accuracy using average model is 0.968351
+After 13 training step(s),validation accuracy using average model is 0.970681
+After 14 training step(s),validation accuracy using average model is 0.973162
+After 15 training step(s),validation accuracy using average model is 0.975417
+After 16 training step(s),validation accuracy using average model is 0.977823
+After 17 training step(s),validation accuracy using average model is 0.979477
+After 18 training step(s),validation accuracy using average model is 0.980755
+After 19 training step(s),validation accuracy using average model is 0.981657
+After 20 training step(s),test accuracy using average model is 0.930941
+
+
+    #定义两层隐含层的神经网络，一层500个结点，一层300个结点
+    LAYER1_NODE=500
+    LAYER2_NODE=300
+
+    #定义学习率，学习率衰减速度，正则系数，训练调整参数的次数以及平滑衰减率
+    LEARNING_RATE_BASE=0.1
+    LEARNING_RATE_DECAY=0.99
+    REGULARIZATION_RATE=0.0001
+    TRAINING_STEPS=20
+    MOVING_AVERAGE_DECAY=0.99
+    batch_size = 128
+
+
+
+
+
+
+E:\python3\python3.exe "E:/PycharmProjects/neural network/baidu_analysis/sentiment analysisvec.py"
+E:\python3\lib\site-packages\gensim\utils.py:1197: UserWarning: detected Windows; aliasing chunkize to chunkize_serial
+  warnings.warn("detected Windows; aliasing chunkize to chunkize_serial")
+食品餐饮
+dataset
+test_size = 1365
+WARNING:tensorflow:From E:/PycharmProjects/neural network/baidu_analysis/sentiment analysisvec.py:177: arg_max (from tensorflow.python.ops.gen_math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `argmax` instead
+2018-06-02 13:47:12.781228: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+WARNING:tensorflow:From E:\python3\lib\site-packages\tensorflow\python\util\tf_should_use.py:118: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+After 0 training step(s),validation accuracy using average model is 0.770952
+After 1 training step(s),validation accuracy using average model is 0.78153
+After 2 training step(s),validation accuracy using average model is 0.787144
+After 3 training step(s),validation accuracy using average model is 0.788202
+After 4 training step(s),validation accuracy using average model is 0.791782
+After 5 training step(s),validation accuracy using average model is 0.792596
+After 6 training step(s),validation accuracy using average model is 0.794874
+After 7 training step(s),validation accuracy using average model is 0.79585
+After 8 training step(s),validation accuracy using average model is 0.79764
+After 9 training step(s),validation accuracy using average model is 0.798535
+After 10 training step(s),validation accuracy using average model is 0.799349
+After 11 training step(s),validation accuracy using average model is 0.800407
+After 12 training step(s),validation accuracy using average model is 0.801139
+After 13 training step(s),validation accuracy using average model is 0.801546
+After 14 training step(s),validation accuracy using average model is 0.802034
+After 15 training step(s),validation accuracy using average model is 0.803173
+After 16 training step(s),validation accuracy using average model is 0.80358
+After 17 training step(s),validation accuracy using average model is 0.804475
+After 18 training step(s),validation accuracy using average model is 0.804963
+After 19 training step(s),validation accuracy using average model is 0.806184
+After 20 training step(s),test accuracy using average model is 0.808059
+旅游住宿
+dataset
+test_size = 1893
+After 0 training step(s),validation accuracy using average model is 0.944255
+After 1 training step(s),validation accuracy using average model is 0.948011
+After 2 training step(s),validation accuracy using average model is 0.950006
+After 3 training step(s),validation accuracy using average model is 0.950534
+After 4 training step(s),validation accuracy using average model is 0.951825
+After 5 training step(s),validation accuracy using average model is 0.95247
+After 6 training step(s),validation accuracy using average model is 0.952881
+After 7 training step(s),validation accuracy using average model is 0.953292
+After 8 training step(s),validation accuracy using average model is 0.953703
+After 9 training step(s),validation accuracy using average model is 0.954172
+After 10 training step(s),validation accuracy using average model is 0.9547
+After 11 training step(s),validation accuracy using average model is 0.954935
+After 12 training step(s),validation accuracy using average model is 0.95517
+After 13 training step(s),validation accuracy using average model is 0.955228
+After 14 training step(s),validation accuracy using average model is 0.955404
+After 15 training step(s),validation accuracy using average model is 0.955639
+After 16 training step(s),validation accuracy using average model is 0.955991
+After 17 training step(s),validation accuracy using average model is 0.956226
+After 18 training step(s),validation accuracy using average model is 0.956519
+After 19 training step(s),validation accuracy using average model is 0.957047
+After 20 training step(s),test accuracy using average model is 0.955098
+金融服务
+dataset
+test_size = 1434
+After 0 training step(s),validation accuracy using average model is 0.882029
+After 1 training step(s),validation accuracy using average model is 0.886445
+After 2 training step(s),validation accuracy using average model is 0.889233
+After 3 training step(s),validation accuracy using average model is 0.890085
+After 4 training step(s),validation accuracy using average model is 0.890937
+After 5 training step(s),validation accuracy using average model is 0.891944
+After 6 training step(s),validation accuracy using average model is 0.893184
+After 7 training step(s),validation accuracy using average model is 0.893881
+After 8 training step(s),validation accuracy using average model is 0.894191
+After 9 training step(s),validation accuracy using average model is 0.894423
+After 10 training step(s),validation accuracy using average model is 0.894888
+After 11 training step(s),validation accuracy using average model is 0.89543
+After 12 training step(s),validation accuracy using average model is 0.896359
+After 13 training step(s),validation accuracy using average model is 0.897057
+After 14 training step(s),validation accuracy using average model is 0.897057
+After 15 training step(s),validation accuracy using average model is 0.897676
+After 16 training step(s),validation accuracy using average model is 0.898064
+After 17 training step(s),validation accuracy using average model is 0.899071
+After 18 training step(s),validation accuracy using average model is 0.899535
+After 19 training step(s),validation accuracy using average model is 0.9
+After 20 training step(s),test accuracy using average model is 0.895397
+医疗服务
+dataset
+test_size = 2031
+After 0 training step(s),validation accuracy using average model is 0.956512
+After 1 training step(s),validation accuracy using average model is 0.959958
+After 2 training step(s),validation accuracy using average model is 0.961217
+After 3 training step(s),validation accuracy using average model is 0.961873
+After 4 training step(s),validation accuracy using average model is 0.962037
+After 5 training step(s),validation accuracy using average model is 0.962748
+After 6 training step(s),validation accuracy using average model is 0.963131
+After 7 training step(s),validation accuracy using average model is 0.963405
+After 8 training step(s),validation accuracy using average model is 0.963678
+After 9 training step(s),validation accuracy using average model is 0.964006
+After 10 training step(s),validation accuracy using average model is 0.96417
+After 11 training step(s),validation accuracy using average model is 0.964335
+After 12 training step(s),validation accuracy using average model is 0.964608
+After 13 training step(s),validation accuracy using average model is 0.964827
+After 14 training step(s),validation accuracy using average model is 0.964882
+After 15 training step(s),validation accuracy using average model is 0.964991
+After 16 training step(s),validation accuracy using average model is 0.96521
+After 17 training step(s),validation accuracy using average model is 0.965538
+After 18 training step(s),validation accuracy using average model is 0.965702
+After 19 training step(s),validation accuracy using average model is 0.965757
+After 20 training step(s),test accuracy using average model is 0.947317
+物流快递
+dataset
+test_size = 1477
+After 0 training step(s),validation accuracy using average model is 0.931063
+After 1 training step(s),validation accuracy using average model is 0.935273
+After 2 training step(s),validation accuracy using average model is 0.938581
+After 3 training step(s),validation accuracy using average model is 0.939558
+After 4 training step(s),validation accuracy using average model is 0.940761
+After 5 training step(s),validation accuracy using average model is 0.940986
+After 6 training step(s),validation accuracy using average model is 0.941513
+After 7 training step(s),validation accuracy using average model is 0.942264
+After 8 training step(s),validation accuracy using average model is 0.943016
+After 9 training step(s),validation accuracy using average model is 0.943768
+After 10 training step(s),validation accuracy using average model is 0.944595
+After 11 training step(s),validation accuracy using average model is 0.94467
+After 12 training step(s),validation accuracy using average model is 0.945271
+After 13 training step(s),validation accuracy using average model is 0.945647
+After 14 training step(s),validation accuracy using average model is 0.946023
+After 15 training step(s),validation accuracy using average model is 0.946399
+After 16 training step(s),validation accuracy using average model is 0.946775
+After 17 training step(s),validation accuracy using average model is 0.947
+After 18 training step(s),validation accuracy using average model is 0.947226
+After 19 training step(s),validation accuracy using average model is 0.947677
+After 20 training step(s),test accuracy using average model is 0.948544
+
+Process finished with exit code 0
+
+    #定义神经网络的输入输出结点，每个样本为1*315维，以及输出分类结果
+    INPUT_NODE=size
+    OUTPUT_NODE=3
+
+    #定义两层隐含层的神经网络，一层500个结点，一层300个结点
+    LAYER1_NODE=1000
+    LAYER2_NODE=1000
+
+    #定义学习率，学习率衰减速度，正则系数，训练调整参数的次数以及平滑衰减率
+    LEARNING_RATE_BASE=0.1
+    LEARNING_RATE_DECAY=0.99
+    REGULARIZATION_RATE=0.0001
+    TRAINING_STEPS=20
+    MOVING_AVERAGE_DECAY=0.99
+    batch_size = 300
+
+
+model = word2vec.Word2Vec(sentences, sg=1, size=size, window=10, min_count=5, negative=3, sample=0.001, hs=1)

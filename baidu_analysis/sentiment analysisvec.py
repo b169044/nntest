@@ -1,12 +1,14 @@
 #-*- coding: UTF-8 -*-
 # https://blog.csdn.net/m0_37650263/article/details/77343220
 # https://blog.csdn.net/leiting_imecas/article/details/71246541
+# word2vec
 import numpy as np
 import tensorflow as tf
 import random
 from sklearn.feature_extraction.text import CountVectorizer
 import os
 import csv
+from gensim.models import word2vec
 
 real_dir_path = os.path.split(os.path.realpath(__file__))[0]
 file = os.path.join(real_dir_path, 'data_train.csv')
@@ -14,6 +16,7 @@ file2 = os.path.join(real_dir_path, 'data_test.csv')
 nn = 1
 
 for b in ['食品餐饮', '旅游住宿', '金融服务', '医疗服务', '物流快递']:
+    size = 200
     print(b)
     # str =''
     # list = []
@@ -49,48 +52,35 @@ for b in ['食品餐饮', '旅游住宿', '金融服务', '医疗服务', '物�
                 sentence.append(words[i])
         return sentence
 
-    def create_vocab(file):
-        def process_file(file_path):
-            with open(file_path, 'r') as f:
-                v = []
-                lines = f.readlines()
-                for line in lines:
-                    if(line.split('\t')[1]==b):
-                        sentence = cut_stopword_pos(line.split('\t')[2].replace('hellip',''))
-                        v.append(' '.join(sentence))
-                print('finished')
-                return v
-        sent = process_file(file)
-        tf_v = CountVectorizer(max_df=0.9, min_df=1)
-        tf = tf_v.fit_transform(sent)
-        #print tf_v.vocabulary_
-        return list(tf_v.vocabulary_.keys())
 
-    vocab = create_vocab(file)
-    print('vocab')
+    sentences = word2vec.Text8Corpus("fenci_result"+str(nn)+".txt")
+    model = word2vec.Word2Vec(sentences, sg=1, size=size, window=10, min_count=5, negative=3, sample=0.001, hs=1)
 
-    def normalize_dataset(vocab):
+
+    def getWordVecs(size):  # 获得评论中所有词向量的平均值
         dataset = []
-        # vocab:词汇表; review:评论; clf:评论对应的分类, 0：负面、1：中性、2：正面
-        def string_to_vector(vocab, review, clf):
-            words = cut_stopword_pos(review) # list of str
-            features = np.zeros(len(vocab))
-            clfs = np.zeros(3)
-            clfs[int(clf)] = 1
-            for w in words:
-                if w in vocab:
-                    features[vocab.index(w)] = 1
-            return [features, clfs]
         with open(file, 'r') as f:
             lines = f.readlines()
             for line in lines:
                 if (line.split('\t')[1] == b):
-                    one_sample = string_to_vector(vocab, line.split('\t')[2], line.split('\t')[-1].replace('\n',''))
-                    dataset.append(one_sample)
-            print('finished2')
+                    sentence = cut_stopword_pos(line.split('\t')[2].replace('hellip', ''))
+                    vecs = np.zeros(size).reshape((1, size))
+                    count = 0
+                    for word in sentence:
+                        word = word.replace('\n', '')
+                        try:
+                            vecs += model[word].reshape((1, size))
+                            count += 1
+                        except KeyError:
+                            continue
+                    if count != 0:
+                        vecs /= count
+                    clfs = np.zeros(3)
+                    clfs[int(line.split('\t')[-1].replace('\n',''))] = 1
+                    dataset.append([vecs[0], clfs])
         return dataset
 
-    dataset = normalize_dataset(vocab)
+    dataset = getWordVecs(size)
     print('dataset')
     #取样本的10%作为测试数据
     test_size = int(len(dataset) * 0.1)
@@ -99,34 +89,36 @@ for b in ['食品餐饮', '旅游住宿', '金融服务', '医疗服务', '物�
     test_dataset = dataset[-test_size:]
     print ('test_size = {}'.format(test_size))
 
-    def normalize_dataset2(vocab):
+    def getWordVecs2(size):
         dataset = []
-        # vocab:词汇表; review:评论; id:序号
-        def string_to_vector(vocab, review, id):
-            words = cut_stopword_pos(review) # list of str
-            features = np.zeros(len(vocab))
-            for w in words:
-                if w in vocab:
-                    features[vocab.index(w)] = 1
-            return [id,features]
         with open(file2, 'r') as f:
             lines = f.readlines()
             for line in lines:
                 if (line.split('\t')[1] == b):
-                    one_sample = string_to_vector(vocab, line.split('\t')[2], line.split('\t')[0].replace('\n',''))
-                    dataset.append(one_sample)
-            print('finished3')
+                    sentence = cut_stopword_pos(line.split('\t')[2].replace('hellip', ''))
+                    vecs = np.zeros(size).reshape((1, size))
+                    count = 0
+                    for word in sentence:
+                        word = word.replace('\n', '')
+                        try:
+                            vecs += model[word].reshape((1, size))
+                            count += 1
+                        except KeyError:
+                            continue
+                    if count != 0:
+                        vecs /= count
+                    dataset.append([line.split('\t')[0].replace('\n',''),vecs[0]])
         return dataset
     #需要预测的数据
-    dataset2 = normalize_dataset2(vocab)
+    dataset2 = getWordVecs2(size)
 
     #定义神经网络的输入输出结点，每个样本为1*315维，以及输出分类结果
-    INPUT_NODE=len(vocab)
+    INPUT_NODE=size
     OUTPUT_NODE=3
 
     #定义两层隐含层的神经网络，一层500个结点，一层300个结点
-    LAYER1_NODE=500
-    LAYER2_NODE=300
+    LAYER1_NODE=1000
+    LAYER2_NODE=1000
 
     #定义学习率，学习率衰减速度，正则系数，训练调整参数的次数以及平滑衰减率
     LEARNING_RATE_BASE=0.1
@@ -134,7 +126,7 @@ for b in ['食品餐饮', '旅游住宿', '金融服务', '医疗服务', '物�
     REGULARIZATION_RATE=0.0001
     TRAINING_STEPS=20
     MOVING_AVERAGE_DECAY=0.99
-    batch_size = 128
+    batch_size = 300
 
 
     #定义整个神经网络的结构，也就是向前传播的过程，avg_class为平滑可训练量的类，不传入则不使用平滑
@@ -230,9 +222,10 @@ for b in ['食品餐饮', '旅游住宿', '金融服务', '医疗服务', '物�
         test_acc = sess.run(accuracy, feed_dict=test_feed)
         print("After %d training step(s),test accuracy using average model is %g" % (TRAINING_STEPS, test_acc))
         #保存模型
-        saver = tf.train.Saver()
-        model_path = 'saved_model/model'+str(nn)+'.ckpt'
-        saver.save(sess, model_path)
+        # saver = tf.train.Saver()
+        # model_path = 'saved_model/model'+str(nn)+'.ckpt'
+        # saver.save(sess, model_path)
+
         nn +=1
 
         out = open('result.csv', 'a', newline='')
@@ -243,4 +236,4 @@ for b in ['食品餐饮', '旅游住宿', '金融服务', '医疗服务', '物�
             yy = sess.run(y,feed_dict={x:[ceshi_x]})
             csv_write.writerow([id,np.argmax(yy)])
 
-        # exit()
+        #exit()
